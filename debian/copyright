@@ -1,0 +1,13 @@
+This package was debianized by Michael Meskes <meskes@debian.org> on
+Sun, 29 Oct 2000 13:55:29 +0100.
+
+It was downloaded from http://www.mcknight.de/jftpgw/
+
+Upstream Author: Joachim Wieland <joe@mcknight.de>
+
+Copyright:
+
+jftpgw is GPL software.
+
+On Debian GNU/Linux systems, the complete text of the GNU General
+Public License (Version 2.0) can be found in /usr/share/common-licenses/GPL'.  

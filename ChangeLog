@@ -1,0 +1,79 @@
+Changelog for jftpgw:
+
+changes new in 0.13.5, Wed Jun  3 16:17:44 CEST 2004
+  * Fixed a bug regarding changing uids/gids (Niki Waibel)
+  * Fixed a bug regarding changeroot (Niki Waibel)
+  * Clarified the setting of the umask of the logfile (Niki Waibel)
+  * Fixed a bug in the commonlog logging format (Andrew Zhoglo)
+  * Passing complete encrypted password to crypt, not only salt (Arkadius
+    Nowakowski)
+  * Allowing STOU command (Pawel Worach)
+  * Allowing more errors at the call to accept() that are connection related
+    and don't force us to shut down the server (Reil Brennan)
+  * Added option to close the connection after consequent protocol violations
+  * Fixed compiler warnings with gcc 3 (includes renaming of log() to jlog())
+  * Updated configure.in to new autoconf/automake versions
+  * "Entering Passive Mode" did not get logged because of "PASS" substring
+    (Yan, Dong)
+  * Changed xferlog-style (Toni)
+  * jftpgw didn't compile on NetBSD 2.0E because IPL_NAT is not known there
+    anymore - added #ifdef (Ray Phillips)
+  * annotated default configuration file
+
+changes new in 0.13.4, Tue Apr  1 10:17:31 CEST 2003
+  * Added jftpgw.conf to debian/ directory (Michael Meskes)
+  * Fixed segmentation fault with wrong configuration file (Volker-J Westphal)
+  * Fixed possible syslog logging vulnerability (b0f)
+
+changes new in 0.13.3, Wed Mar 19 21:03:40 CET 2003
+  * Fixed ASCII mode transfer bug (again) (Peter Pendic)
+  * Fixed ASCII mode file listing bug (Radu Rendec, Anthony Baire)
+  * We now only keep the binary connection to the server if the cache is
+    enabled because there might be problems with other formats like ebcdic
+    (Pawel Worach)
+  * updated Copyright-Headers to 2003 and added missing ones
+  * Pidfile got created even when the proxy could not bind to the port (Stefan
+    Esser)
+  * Enhanced and cleaned up specfile (by Peter Bieringer)
+  * jftpgw now installs to sbin/ and should install the config files into the
+    proper directory (--prefix...)
+  * Removed "Big bad error" allowing FTP servers to send empty lines within a
+    reply (This should fix problems with virus scanning FTP proxies)
+    (Johannes Walch)
+  * Small code cleanups
+  * cacheing didn't work on FreeBSD which resulted in EISDIR, not in EEXIST if
+    a directory already exited (Int0 - Alex)
+  * Added two new log formats to the style option: %u and %U to log unix time
+    (seconds since the epoch) (Dmitry Vereschaka)
+  * Removed date at the beginning of each line (Dmitry Vereschaka)
+  * Added new log formats %D, %t (besides %u and %U above)
+  * Fixed commonlog log format
+  * updated support/ipfilter.c to 1.19
+
+changes new in 0.13.2, Sun Dec 15 12:18:06 CET 2002
+  * Added doc/ directory with config.html included there. This is just a 1:1
+    copy from the webpage (Gonçalo Trincao)
+  * Added debian/ directory (Michael Meskes)
+  * Allowing empty passwords (Jan Fedak)
+  * Fixed a bug with cmdlogfile-specs (Martin Bayley)
+  * Updated support/ipfilter.[c|h] to 1.18 (Rene Scholz)
+  * debuglevel == 0 was rejected, fixed now
+  * Fixed xferlog style (%t vs %T) (Christian Recktenwald)
+  * cmdlogfile-style now documented (Christian Recktenwald)
+  * dropprivileges now has "startsetup" as the default (Friedrich Lobenstock)
+  * Fixed ASCII mode transfer bug (Stefaan Van Hoornick, Peter Pendic)
+  * Fixed some xferlog stuff
+  * Fixed support for getinternalip == "configuration" (Henrik Holmstam)
+  * Add command switch "initialsyst" to suppress initial SYST command (Niki
+    Waibel)
+  * Fixed caching bug, transfer got aborted (Anthony Baire)
+
+changes new in 0.13.1, Apr 11 17:42:49 CEST 2002
+  * fixed problems with loginstyle 7, thanks to Jonuschat Morton for pointing
+    it out.
+  * fixed problems with processes whose connection timed out. Thanks go to
+    Ram Narula.
+  * fixed a problem with the transparent-forward option and added the new
+    option transparent-forward-include-port. Thomas Valentin told me about
+    this.
+

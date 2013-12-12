@@ -1,0 +1,2690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>jftpgw FTP proxy 0.13.5 - Configuration</title>
+  <link rev=made href="mailto:joe@mcknight.de">
+</head>
+<body bgcolor="#cce9f0" text="#010101" link="blue" vlink="#73ad73"
+alink="white">
+<!-- The title line -->
+<table width="100%" border=0><tr><td>
+<table width="100%" bgcolor="#b6e1f0" cellspacing=0 cellpadding=2 border=0>
+ <tr><td align=left bgcolor="#91c9f7"><font size="-1">Welcome to the configuration of</font></td></tr>
+ <tr><td align=center><font size="+2"><strong>jftpgw FTP proxy 0.13.5</strong></font></td></tr>
+ <tr><td align=right bgcolor="#91c9f7"><font size="-1">Last update:
+                 Thu Jun  3 18:07:18 CEST 2004</font></td></tr>
+</table>
+</td></tr></table>
+<!-- Here is the main part of the page: -->
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+ <tr>
+  <td width="20%" valign=top> <!-- navigation -->
+    <table width="100%" cellspacing=2 border=0><tr><td>
+    <table width="100%" bgcolor="#b6e1f0" cellspacing=0 cellpadding=2 border=0>
+     <tr bgcolor="#91c9f7">
+      <td><strong>Navigation</strong></td>
+     </tr>
+     <tr>
+      <td><ul type=circle>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="features.html">Features</a></li>
+       <li><a href="wheretouse.html">Where to use</a></li>
+       <li><a href="howtouse.html">How to use</a></li>
+       <li><a href="howtouse-tp.html">How to use the tranparent proxy
+       support </a></li>
+       <li>The configuration
+       		<font size="-1"><ul type=square>
+<li><a href="config.html#access">access</a></li>
+<li><a href="config.html#account">account</a></li>
+<li><a href="config.html#activeportrange">activeportrange</a></li>
+<li><a href="config.html#activeportrangeclient">activeportrangeclient</a></li>
+<li><a href="config.html#activeportrangeserver">activeportrangeserver</a></li>
+<li><a href="config.html#allowforeignaddress">allowforeignaddress</a></li>
+<li><a href="config.html#allowreservedports">allowreservedports</a></li>
+<li><a href="config.html#cache">cache</a></li>
+<li><a href="config.html#cachemaxsize">cachemaxsize</a></li>
+<li><a href="config.html#cacheminsize">cacheminsize</a></li>
+<li><a href="config.html#cacheprefix">cacheprefix</a></li>
+<li><a href="config.html#changeroot">changeroot</a></li>
+<li><a href="config.html#changerootdir">changerootdir</a></li>
+<li><a href="config.html#cmdlogfile">cmdlogfile</a></li>
+<li><a href="config.html#cmdlogfile-style">cmdlogfile-style</a></li>
+<li><a href="config.html#commandtimeout">commandtimeout</a></li>
+<li><a href="config.html#connectionlogdir">connectionlogdir</a></li>
+<li><a href="config.html#controlserveraddress">controlserveraddress</a></li>
+<li><a href="config.html#dataclientaddress">dataclientaddress</a></li>
+<li><a href="config.html#dataport">dataport</a></li>
+<li><a href="config.html#dataserveraddress">dataserveraddress</a></li>
+<li><a href="config.html#debuglevel">debuglevel</a></li>
+<li><a href="config.html#defaultforward">defaultforward</a></li>
+<li><a href="config.html#defaultmode">defaultmode</a></li>
+<li><a href="config.html#dnslookups">dnslookups</a></li>
+<li><a href="config.html#dropprivileges">dropprivileges</a></li>
+<li><a href="config.html#forward">forward</a></li>
+<li><a href="config.html#forwardlookups">forwardlookups</a></li>
+<li><a href="config.html#getinternalip">getinternalip</a></li>
+<li><a href="config.html#hostcachetimeout">hostcachetimeout</a></li>
+<li><a href="config.html#initialsyst">initialsyst</a></li>
+<li><a href="config.html#limit">limit</a></li>
+<li><a href="config.html#listen">listen</a></li>
+<li><a href="config.html#logfile">logfile</a></li>
+<li><a href="config.html#loginstyle">loginstyle</a></li>
+<li><a href="config.html#logintime">logintime</a></li>
+<li><a href="config.html#logstyle">logstyle</a></li>
+<li><a href="config.html#passallauth">passallauth</a></li>
+<li><a href="config.html#passiveportrange">passiveportrange</a></li>
+<li><a href="config.html#passiveportrangeclient">passiveportrangeclient</a></li>
+<li><a href="config.html#passiveportrangeserver">passiveportrangeserver</a></li>
+<li><a href="config.html#pidfile">pidfile</a></li>
+<li><a href="config.html#reverselookups">reverselookups</a></li>
+<li><a href="config.html#runasgroup">runasgroup</a></li>
+<li><a href="config.html#runasuser">runasuser</a></li>
+<li><a href="config.html#serverport">serverport</a></li>
+<li><a href="config.html#strictasciiconversion">strictasciiconversion</a></li>
+<li><a href="config.html#syslogfacility">syslogfacility</a></li>
+<li><a href="config.html#throughput">throughput</a></li>
+<li><a href="config.html#transfertimeout">transfertimeout</a></li>
+<li><a href="config.html#transparent-forward">transparent-forward</a></li>
+<li><a href="config.html#transparent-forward-include-port">transparent-forward-include-port</a></li>
+<li><a href="config.html#transparent-proxy">transparent-proxy</a></li>
+<li><a href="config.html#udpport">udpport</a></li>
+<li><a href="config.html#welcomeline">welcomeline</a></li>
+       		</ul></font></li>
+       <li><a href="portability.html">Portability</a></li>
+       <li><a href="download.html">Download</a></li>
+       <li><a href="todo.html">Todo</a></li>
+       <li><a href="contribute.html">Contribute</a></li>
+       <li><a href="mailinglist.html">Mailinglist</a></li>
+      </ul></td>
+     </tr>
+    </table>
+    </td></tr><tr><td>
+    <table width="100%" bgcolor="#91c9f7" cellspacing=0 cellpadding=3 border=0><tr><td>
+     <table width="100%" bgcolor="#b6e1f0" cellspacing=0 cellpadding=2 border=0>
+      <tr><td align=center><font size="-1"><a href="mailto:joe@mcknight.de">Joachim Wieland</a></font></td>
+      </tr>
+     </table></td></tr></table></td></tr>
+    </table>
+  </td>
+  <td valign=top> <!-- contents -->
+   <table width="100%" bgcolor="#b6e1f0" cellspacing=3 border=0><tr><td>
+   <table width="100%" cellspacing=0 cellpadding=2 border=0>
+    <tr bgcolor="#91c9f7">
+     <td><strong>Overview</strong></td>
+    </tr>
+    <tr><td>
+	After 0.12.x the configuration file has changed completely. This is
+	because the old configuration system was not flexible enough. The
+	new system is like HTML or more, like XML. You describe a connection
+	through the proxy and set an option to some value. Now, if the
+	criteria for that connection matches, the option is valid. The next
+	paragraph shows a sample configuration file. The settings have no
+	special purpose, it's just to show you how the configuration file
+	looks like.
+    </td></tr>
+   </table></td></tr><tr><td><table width="100%" cellspacing=0 cellpadding=2 border=0>
+    <tr bgcolor="#91c9f7">
+     <td><strong>Sample configuration file</strong></td></tr>
+    <tr><td>
+<pre>
+&lt;global&gt;
+	logstyle		files
+	listen			192.168.181.234:2370
+	serverport		21
+	pidfile			/var/run/jftpgw.pid
+	runasuser		nobody
+	passiveportrange	44000:44999
+	activeportrange		55000:57999
+	debuglevel		9
+	logfile			/home/joe/jftpgw/jftpgw.log
+	cmdlogfile		/home/joe/jftpgw/jftpgw.xferlog
+	cmdlogfile-style	"time: %T, bytes: %b, status: %s"
+	cmdlogfile-specs	RETR STOR
+	cacheprefix		/temp/cache
+&lt;/global&gt;
+
+# nobody should connect, except for host1 and host2
+&lt;from 0.0.0.0/0 exclude host1 host2&gt;
+	access deny
+&lt;/from&gt;
+
+# host1, host2.domain.net and 192.168.181.234 are allowed to
+# connect to some other host on port 21.
+&lt;from host1 host2.domain.net 192.168.181.234&gt;
+	&lt;port 21&gt;
+		access allow
+	&lt;/port&gt;
+&lt;/from&gt;
+
+# *.domain.net may not connect, this paragraph is not valid for
+# host1 and host2. If the connection comes from
+# .slowdomain.domain.net moreover, limit the connection to 4k/s.
+&lt;from .domain.net exclude host1 host2&gt;
+	access deny
+	&lt;from .slowdomain.domain.net&gt;
+		throughput 4
+	&lt;/from&gt;
+&lt;/from&gt;
+
+# The host on which jftpgw runs may not connect to the proxy
+# itself. Thus, the proxy may not loop by calling itself again
+&lt;to localhost 0.0.0.0 serverhost.domain.net&gt;
+	&lt;port 2370&gt;
+		access deny
+	&lt;/port&gt;
+&lt;/to&gt;
+
+# This paragraph is valid for all connections again
+&lt;global&gt;
+	defaultmode		passive
+&lt;/global&gt;
+
+</pre>
+     </td></tr>
+   </table></td></tr>
+
+   <tr><td><table width="100%" cellspacing=0 cellpadding=2 border=0>
+    <tr bgcolor="#91c9f7">
+     <td><strong>How the configuration is checked and applied</strong></td></tr>
+    <tr><td>
+     There are the following tags to describe a connection:
+     <ul>
+	<li><pre>&lt;global&gt;</pre></li>
+	<li><pre>&lt;servertype&gt;</pre></li>
+	<li><pre>&lt;from&gt;</pre></li>
+	<li><pre>&lt;to&gt;</pre></li>
+	<li><pre>&lt;user&gt;</pre></li>
+	<li><pre>&lt;port&gt;</pre></li>
+	<li><pre>&lt;proxyip&gt;</pre></li>
+	<li><pre>&lt;proxyport&gt;</pre></li>
+	<li><pre>&lt;forwarded&gt;</pre></li>
+	<li><pre>&lt;time&gt;</pre></li>
+     </ul>
+     The format in the configuration file is the following:
+     <pre>
+	&lt;tagname   whitelist    exclude   blacklist&gt;
+		[ options ]
+	&lt;/tagname&gt;
+</pre>
+	A tag is "valid" if the connection has at least one property that
+	matches an entry in the whitelist and no property from the
+	blacklist. In every other case the connection is not valid.
+
+	The tags may be nested to combine different properties or you can
+	list them to test several independent connection properties.
+
+	For example, in:
+	<pre>
+		&lt;from hosta hostb hostc&gt;
+			&lt;to dest1 dest2 dest3&gt;
+				...
+			&lt;/to&gt;
+			
+			&lt;to desta destb destc&gt;
+				...
+			&lt;/to&gt;
+		&lt;/from&gt;
+</pre>
+	we have two &lt;to&gt;-Tags that are nested in one &lt;from&gt; tag.
+	Both &lt;to&gt;-Tags depend on the surrounding &lt;from&gt; tag
+	since they will never be examined if the surrounding tag doesn't
+	match.<p>
+	The two &lt;to&gt;-Tags however are listed sequentially and so they are
+	independent. While one of them may match or may not, this has no
+	effect on whether the other &lt;to&gt;-Tag matches.<p>
+	The options inside the tags tell jftpgw <i>how</i> to behave, the
+	tags have the role to tell, <i>when</i> to do it.<p>
+	Of course, an option may occur more than once and it also may be
+	valid more than once. If so, the value that was assigned to the
+	option name the last time is the value of the option.<p>
+	If a client connects to the FTP proxy, it first checks if the client
+	IP is allowed to connect. In this step only the &lt;global&gt;, the
+	&lt;from&gt;, the &lt;proxyip&gt;, the &lt;proxyport&gt;, the
+	&lt;time&gt; and the &lt;from&gt; sections are evaluated. If an
+	"access allow" is found according to the rules described above, the
+	client is allowed to connect.<p>
+	This means that the following access scheme won't work:<p>
+<pre>
+		&lt;from hosta hostb hostc&gt;          ! wrong
+			&lt;to dest1 dest2 dest3&gt;    ! wrong
+				access allow            ! wrong
+			&lt;/to&gt;                     ! wrong
+		&lt;/from&gt;                           ! wrong
+</pre>
+	The reason is that in this case jftpgw only evaluates the
+	&lt;from&gt; tag when a client connects. It doesn't know where the
+	client wants to connect to. It doesn't find any "access allow"
+	within the evaluated tags and thus the connection is closed before
+	evaluating any other tags. The &lt;to&gt; tag never gets
+	evaluated and the "access allow" statement is never seen.<p>
+	Instead, try something like:
+<pre>
+		&lt;from hosta hostb hostc&gt;
+			access allow
+			&lt;to 0/0 exclude dest1 dest2 dest3&gt;
+				access deny
+			&lt;/to&gt;
+		&lt;/from&gt;
+</pre>
+	Thereafter the client sends the login information and
+	the proxy connects to the server. This is done by discarding the
+	tags that do not match and creating a list of options out of the
+	other tags.
+    </td></tr>
+   </table></td></tr>
+
+   <tr><td><table width="100%" cellspacing=0 cellpadding=2 border=0>
+    <tr bgcolor="#91c9f7">
+    <td><strong>Detailed description of jftpgw's tags</strong></td></tr>
+    <tr><td>
+      <ul>
+      <li><b>global</b>: This tag matches always. Use it for general proxy
+      setup.
+<pre>
+&lt;global&gt;
+	serverport		21
+	pidfile			/var/run/jftpgw.pid
+	runasuser		nobody
+	[...]
+&lt;/global&gt;
+</pre>
+</li>
+
+      <li><b>servertype</b>: The servertype tag can be used to
+      distinguish between a <i>standalone</i> and an <i>inetd</i> server.
+
+      Use the following configuration directives to log to files and bind to
+      123.123.123.123 port 2370 if the proxy is run as a daemon and to log
+      to the syslog if it is called by the (x)inetd superserver.
+<pre>
+&lt;servertype standalone&gt;
+        listen                  123.123.123.123:2370
+        logstyle                files
+&lt;/servertype&gt;
+
+&lt;servertype inetd&gt;
+        logstyle                syslog
+&lt;/servertype&gt;
+</pre>
+      </li>
+      <li><b>from</b>: This tag only matches for connections coming from IPs
+      or hostnames that are listed here. You may specify single IPs
+      (<i>123.123.123.123</i>), IPs with netmasks (<i>123.123.123.0/24</i>
+      as well as <i>123.123.123.0/255.255.255.0</i>), hostnames
+      (<i>host.sub.domain.com</i>) and domains (<i>.sub.domain.com</i>).
+      Mind the leading dot in the last example.<br>
+      You may also specify certain sources you want to exclude. The tag
+      matches if the source shows up in the first section but does not show
+      up in the second, in the exclude section.<p>
+      Here are a few examples:<p>
+Set some options for connections coming from client1, client.with.domain.com
+and from the IP 192.168.181.234.
+<pre>
+&lt;from client1 client.with.domain.com 192.168.181.234&gt;
+	transparent-proxy on
+	getinternalip icmp
+&lt;/from&gt;
+</pre>
+
+Allow access from all IPs that resolve to *.localdomain.com as well as for
+all computers with an IP of 172.26.14.* but do not allow access from the IP
+172.26.14.1.
+<pre>
+&lt;from .localdomain.com 172.26.14.0/255.255.255.0 exclude 172.26.14.1&gt;
+	access allow
+&lt;/from&gt;
+</pre>
+
+This has the same functionality as above, but it goes the other way round.
+It blocks all IPs except for the local ones explicitly.
+<pre>
+&lt;from 0/0 exclude 172.26.14.0/24 .localdomain.com&gt;
+	access deny
+&lt;/from&gt;
+</pre>
+Attention: Please note that is a bad idea to use a syntax of
+<i>.domain.com</i> since anybody who is able to add/change the PTR record
+for his IP is able to set it to <i>anything.domain.com</i> and so you might
+allow access to the wrong persons!
+<br>
+      </li>
+      <li><b>to</b>: You may have already guessed it, this tag matches for
+      connections that go to the specified IPs or hostnames. The same rules
+      for the syntax apply as for the previous paragraph.<p>
+      Have a look at the following examples:<p>
+
+      Use caching for connections going to the following three ftp servers:
+<pre>
+&lt;to ftp1.server.com ftp2.server.com ftp3.server.com&gt;
+	cache on
+&lt;/to&gt;
+</pre>
+
+      Do not allow anybody to use the proxy to connect anywhere except for
+      connections to ftpintern1 and ftpintern2, the two may be your internal
+      FTP servers.
+<pre>
+&lt;to 0/0 exclude ftpintern1 ftpintern2&gt;
+	access deny
+&lt;/to&gt;
+</pre>
+      </li>
+      <li><b>user</b>: The options in the user tag apply if one of the
+      listed user names match the user name of the current connection.
+      You may use the wildcard "*" to match every username. This tag is
+      often used for forwarding special user names to another
+      destination.<p>
+      Here are the examples:<p>
+      Allow only anonymous access:
+<pre>
+&lt;user anonymous&gt;
+	access allow
+&lt;/user&gt;
+</pre>
+If there is a connection to the proxy that requests 192.168.1.2 as
+destination and sends "anonymous" as the username for the target, forward
+the connection to ftp.somewhere.com on port 2121 using active and cached
+transfers.
+<pre>
+&lt;user anonymous&gt;
+	&lt;to 192.168.1.2&gt;
+	       forward ftp.somewhere.com:2121,a
+	       cache on
+	&lt;/to&gt;
+&lt;/user&gt;
+</pre>
+If the login user name for the target is anything else than "specialuser",
+forward the connection to ftp.newdest.com, sending secretuser as username
+and ierk484kf as the password. However the remote user has to send the
+password for his "specialuser" account that is crypted below.
+<pre>
+&lt;user * exclude specialuser&gt;
+	forward secretuser@ftp.newdest.com  KfSNwdnGzWpy. ierk484kf
+&lt;/user&gt;
+</pre>
+      </li>
+      <li><b>port</b>: The port tag compares the specified port list to the
+      destination port of the FTP connection. This is usually port 21 but
+      can be any other port number as well. You may specify discrete port
+      numbers as well as port ranges (startport:endport)<br>
+
+      Use this to restrict access, especially to restrict the incoming
+      traffic if you're using the proxy to enable access to a publicly
+      available FTP server in your private network.
+
+<pre>
+&lt;port 0:65535 exclude 21&gt;
+        access deny
+&lt;/port&gt;
+</pre>
+
+
+      If you're using the transparent proxy feature you could use something
+      like this. It does not allow a connection to the local machine on port
+      2370.
+
+<pre>
+&lt;to localhost 192.168.181.234&gt;
+       access allow
+       &lt;port 2370&gt;
+               access deny
+       &lt;/port&gt;
+&lt;/to&gt;
+</pre>
+
+      Here's another fancy port range specification. It has no real sense,
+      it should just explain the syntax  :-)&lt;br&gt;
+      It would match for ports 21-94, 97-99 and 105-494.
+
+<pre>
+&lt;port 21:94 97:494 exclude 100:104&gt;
+	[...]
+&lt;/port&gt;
+</pre>
+     </li>
+     <li><b>proxyip</b>: This tag is mainly for use with the transparent
+     proxy feature. It resembles the &lt;from&gt; and the
+     &lt;to&gt;-tag quite a lot but it does not match on the intended
+     connection but on the resulting connection to the proxy. With this
+     option you can have a single jftpgw proxy for inbound and outbound
+     traffic. If your computer has one internal IP and one for the internet,
+     everything within
+<pre>
+&lt;proxyip 123.123.123.123&gt;
+	[...]
+&lt;/proxyip&gt;
+</pre>
+     applies to the traffic that connected to the proxy from the outside,
+     i.e. that addressed the IP 123.123.123.123 of your proxy. To set the
+     configuration for outbound traffic, i.e. traffic that addressed the
+     internal IP of your proxy goes here:
+<pre>
+&lt;proxyip 192.168.1.1&gt;
+	[...]
+&lt;/proxyip&gt;
+</pre>
+     You may also specify devices like in the following example:
+<pre>
+&lt;proxyip eth1&gt;
+	[...]
+&lt;/proxyip&gt;
+</pre>
+     However this works only if you see "can get IPs from interfaces" in the
+     output of <i>jftpgw -v</i>.
+     </li>
+     <li><b>proxyport</b>: This tag is of course similar to the
+     &lt;proxyip&gt; option and matches if the connection addressed the
+     proxy at the specified port. Here is an example how this could be used:
+     If you have several internal networks and every network should get a
+     different bandwith, you could set up your firewall to REDIRECT the
+     traffic from these nets to different ports on your firewall. jftpgw
+     then listens to all of them:
+<pre>
+	listen 192.168.1.1:2371 192.168.1.1:2372 192.168.1.1:2373
+</pre>
+     If somebody from one of these nets initiates an FTP connection he will
+     get REDIRECTed by your firewall to, say, port 2372. Now you can
+     specify
+<pre>
+&lt;proxyport 2372&gt;
+	throughput	20.0
+&lt;/proxyport&gt;
+</pre>
+     to give him 20 k/s.<p>
+     Of course you could achieve the same by just putting the
+     throughput-Option in a &lt;from&gt;-tag but you didn't ask for a
+     useful example  :-)
+     <p>
+     </li>
+
+     <li><b>forwarded</b>: This tag wraps around other tags and it is valid
+     for a forwarded connection. It does not take any extra parameters.<p>
+
+     The following section does not match if the user connects to
+     ftp.fu-berlin.de directly, it does only apply if there was a forward
+     specifying that ftp.fu-berlin.de is the new destination. Of course you
+     can use any other tags inside the &lt;forwarded&gt; tag.
+
+<pre>
+&lt;forwarded&gt;
+        &lt;to ftp.fu-berlin.de&gt;
+                cacheminsize    40k
+                cachemaxsize    3M
+        &lt;/to&gt;
+&lt;/forwarded&gt;
+</pre>
+      </li>
+      <li><b>time</b>: The time tag compares the time you specify to the
+      current system time and matches if the system time lies within the
+      specified time.<p>
+      You may either specify a list of days in combination to a time range
+      (Day1/Day2/Day3 xx:xx - yy:yy) which would match every day in the
+      specified interval or you may want the tag to match over a longer
+      period, starting on one day and ending on some other day. Therefore
+      use the following syntax: Day1 xx:xx - Day2 yy:yy<br>
+      You can also leave Day2 away and say: Day xx:xx - yy:yy which means
+      that your interval starts and ends on the same day.<br>
+      The time definition can either be xx<b>:</b>xx (colon) or xx<b>.</b>xx
+      (dot).<br>
+      Separate different time ranges with a "<b>;</b>" or "<b>,</b>".<p>
+
+      Here is an example:
+Deny access on Mondays and Tuesdays from 12.00 to 13.44. Then again from
+Wednesday 19.00 until Friday 20.00. 
+<pre>
+&lt;time Mon/Tue 12:00 - 13:44; Wed 19.00 - Fri 20.00&gt;
+        access deny
+&lt;/time&gt;
+</pre>
+      </li>
+      </ul>
+    </td></tr>
+   </table></td></tr>
+
+
+   <tr><td><table width="100%" cellspacing=0 cellpadding=2 border=0>
+    <tr bgcolor="#91c9f7">
+    <td><strong>List of the configuration options</strong></td></tr>
+    <tr><td>
+
+<ul>
+<li><a href="#access">access</a></li>
+<li><a href="#account">account</a></li>
+<li><a href="#activeportrange">activeportrange</a></li>
+<li><a href="#activeportrangeclient">activeportrangeclient</a></li>
+<li><a href="#activeportrangeserver">activeportrangeserver</a></li>
+<li><a href="#allowforeignaddress">allowforeignaddress</a></li>
+<li><a href="#allowreservedports">allowreservedports</a></li>
+<li><a href="#cache">cache</a></li>
+<li><a href="#cachemaxsize">cachemaxsize</a></li>
+<li><a href="#cacheminsize">cacheminsize</a></li>
+<li><a href="#cacheprefix">cacheprefix</a></li>
+<li><a href="#changeroot">changeroot</a></li>
+<li><a href="#changerootdir">changerootdir</a></li>
+<li><a href="#cmdlogfile">cmdlogfile</a></li>
+<li><a href="#cmdlogfile-style">cmdlogfile-style</a></li>
+<li><a href="#commandtimeout">commandtimeout</a></li>
+<li><a href="#connectionlogdir">connectionlogdir</a></li>
+<li><a href="#controlserveraddress">controlserveraddress</a></li>
+<li><a href="#dataclientaddress">dataclientaddress</a></li>
+<li><a href="#dataport">dataport</a></li>
+<li><a href="#dataserveraddress">dataserveraddress</a></li>
+<li><a href="#debuglevel">debuglevel</a></li>
+<li><a href="#defaultforward">defaultforward</a></li>
+<li><a href="#defaultmode">defaultmode</a></li>
+<li><a href="#dnslookups">dnslookups</a></li>
+<li><a href="#dropprivileges">dropprivileges</a></li>
+<li><a href="#forward">forward</a></li>
+<li><a href="#forwardlookups">forwardlookups</a></li>
+<li><a href="#getinternalip">getinternalip</a></li>
+<li><a href="#hostcachetimeout">hostcachetimeout</a></li>
+<li><a href="#initialsyst">initialsyst</a></li>
+<li><a href="#limit">limit</a></li>
+<li><a href="#listen">listen</a></li>
+<li><a href="#logfile">logfile</a></li>
+<li><a href="#loginstyle">loginstyle</a></li>
+<li><a href="#logintime">logintime</a></li>
+<li><a href="#logstyle">logstyle</a></li>
+<li><a href="#passallauth">passallauth</a></li>
+<li><a href="#passiveportrange">passiveportrange</a></li>
+<li><a href="#passiveportrangeclient">passiveportrangeclient</a></li>
+<li><a href="#passiveportrangeserver">passiveportrangeserver</a></li>
+<li><a href="#pidfile">pidfile</a></li>
+<li><a href="#reverselookups">reverselookups</a></li>
+<li><a href="#runasgroup">runasgroup</a></li>
+<li><a href="#runasuser">runasuser</a></li>
+<li><a href="#serverport">serverport</a></li>
+<li><a href="#strictasciiconversion">strictasciiconversion</a></li>
+<li><a href="#syslogfacility">syslogfacility</a></li>
+<li><a href="#throughput">throughput</a></li>
+<li><a href="#transfertimeout">transfertimeout</a></li>
+<li><a href="#transparent-forward">transparent-forward</a></li>
+<li><a href="#transparent-forward-include-port">transparent-forward-include-port</a></li>
+<li><a href="#transparent-proxy">transparent-proxy</a></li>
+<li><a href="#udpport">udpport</a></li>
+<li><a href="#welcomeline">welcomeline</a></li>
+</ul>
+<table width="100%" cellspacing=0 border=0>
+<a name="access">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>access</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> deny</td>
+</tr>
+</table>
+
+This is the most important option for access control. Set it to <i>allow</i>
+if you want to grant access or to <i>deny</i> to display a "You are not
+allowed to connect" message.
+<p>
+You may set this option (as all others) several times throughout the
+configuration file but the option that is specified last within a valid tag
+matches (see above)
+<p>
+<br><i></i>
+Disallow access from the 192.168.x.x net but allow if the connection is from
+the 192.168.19.x net, if the user name is anonymous and if the connections
+go to some target machine on port 21. Note that both options may apply
+because both <i>&lt;from&gt;</i>-tags may be valid. If so, the last
+<i>access</i>-option is taken into account.
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;from 192.168.0.0/16&gt;
+	access deny
+&lt;/from&gt;
+&lt;from 192.168.19.0/24&gt;
+	&lt;user anonymous&gt;
+		&lt;port 21&gt;
+			access allow
+		&lt;/port&gt;
+	&lt;/user&gt;
+&lt;/from&gt;
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="account">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>account</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Specifies accounts for a user so that this user can log in to the proxy
+before he's able to use it. See the <a href="config.html#loginstyle">the
+loginstyle option</a>) for information on how to set up this password
+checking.
+<p>
+<br><i>Syntax:</i>
+
+<pre>
+Account		&lt;user&gt;	Password	&lt;crypt()ed pass&gt;
+</pre>
+<p>
+You may get crypted passwords by executing
+<pre>
+jftpgw -e
+</pre>
+and typing the cleartext password. The output is a crypt()ed password.
+<p>
+<br><i>Example:</i>
+
+Set the password "test" for the user "fwjoe"
+<pre>
+Account		fwjoe	Password	hFPO1IKNeeeUM
+</pre>
+<p>
+If your platform does not have the crypt() function you'll have to use
+cleartext passwords in this file.
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="activeportrange">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>activeportrange</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Port ranges configuration: You may tell jftpgw which port you want it to
+use for data transfers. Thus you could specify one or more port ranges you
+accept on your firewall and if jftpgw finds a free port in this range,
+this one will be used. So you do not have to open ALL unprivileged ports
+but only, just, err...   :-)<br>
+Furthermore this option is nice if you have an FTP server behind a NAT
+router and just want to pass a port range back to a machine in the private
+network.<br>
+Active and passive ports can be configured separately and the bounds are
+included in the range.<br>
+Please note that the portranges also apply to the source port jftpgw will
+choose. If you want to configure it in a more detailed fashion, see the 
+<a href="config.html#activeportrangeclient">the <i>activeportrangeclient</i></a>,
+<a href="config.html#activeportrangeserver">the <i>activeportrangeserver</i></a>,
+<a href="config.html#passiveportrangeclient">the <i>passiveportrangeclient</i></a> and the
+<a href="config.html#passiveportrangeserver">the <i>passiveportrangeserver</i></a> options.
+<p>
+<br><i>Syntax:</i>
+
+<pre>
+passiveportrange	start1:end1  [start2:end2]  [start3:end3] ...
+activeportrange		start1:end1  [start2:end2]  [start3:end3] ...
+</pre>
+
+<br><i>Example:</i>
+
+<pre>
+passiveportrange	38900:38999   3400:3449   64020:64020
+activeportrange		25400:25499
+
+passiveportrange	39500:39999
+activeportrange		39500:39999
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="activeportrangeclient">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>activeportrangeclient</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The portrange to use for active transfers. This is the portrange that is
+used to choose the source port for the proxy if it connects to the port the
+client told the proxy with the "<i>PORT 127,0,0,1,4,13</i>" message.<p>
+The <i>activeportrangeclient</i> setting overrules the
+<i>activeportrange</i> option.<p>
+See <a href="config.html#activeportrange">the <i>activeportrange</i>
+option</a> for examples on portrange specification.
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="activeportrangeserver">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>activeportrangeserver</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The portrange to use for active transfers. This is the portrange that is
+issued to the server with the "<i>PORT 127,0,0,1,4,13</i>" message. The
+proxy listens on a port in the portrange and waits for the server to
+connect.<p>
+The <i>activeportrangeserver</i> setting overrules the
+<i>activeportrange</i> option.<p>
+See <a href="config.html#activeportrange">the <i>activeportrange</i>
+option</a> for examples on portrange specification.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="allowforeignaddress">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>allowforeignaddress</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> no</td>
+</tr>
+</table>
+
+allowforeignaddress allows a client to specify an IP in the PORT command
+that is different from the IP the connection is originating from. This is
+a security option but if you set it to off (which is the default), you won't
+be able to do FXP transfers any more.<p>
+
+Enable it with
+
+<pre>
+allowforeignaddress on
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="allowreservedports">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>allowreservedports</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> no</td>
+</tr>
+</table>
+
+allowreservedports allows the specification of reserved ports in a PORT
+command. This is part of the "FTP bounce attack" and is therefore
+disabled.
+<p>
+See <a href="http://www.sonic.net/hypermail/security/mbox/0270.html">http://www.sonic.net/hypermail/security/mbox/0270.html</a> for details
+</p><p>
+Enable it with
+<pre>
+allowreservedports on
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="cache">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>cache</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> off</td>
+</tr>
+</table>
+
+This option enables or disables the cache. If you combine it with the
+configuration system you may dynamically switch it on or off depending on
+the different connection properties.
+<p>
+<br><i></i>
+Since we are all fans of Mickeymouse, enable the cache for ftp.micky.com
+<p>
+<br><i>Example:</i>
+
+
+<pre>
+&lt;to ftp.micky.com&gt;
+	cache on
+&lt;/to&gt;
+</pre>
+
+<hr>
+
+<br><i></i>
+Most people have a special account on the Mickeymouse server but it is not
+reasonable to cache it. Furthermore some people know secret Mickeymouse
+servers running on different ports, don't cache them either, they are secret
+:-)<br>
+Only cache anonymous access to ftp.micky.com on port 21.
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;to ftp.micky.com&gt;
+	&lt;user anonymous&gt;
+		&lt;port 21&gt;
+			cache on
+		&lt;/port&gt;
+	&lt;/user&gt;
+&lt;/to&gt;
+</pre>
+
+<hr>
+
+<br><i></i>
+
+<br><i>Example:</i>
+
+The same as above, but the other way round
+
+<pre>
+&lt;global&gt;
+	cache on
+&lt;/global&gt;
+&lt;to 0/0 exclude ftp.micky.com&gt;
+	cache off
+&lt;/to&gt;
+&lt;user * exclude anonymous&gt;
+	cache off
+&lt;/user&gt;
+&lt;port 0:20 22:65535&gt;
+	cache off
+&lt;/port&gt;
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="cachemaxsize">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>cachemaxsize</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> unlimited</td>
+</tr>
+</table>
+
+Specify the maximal size of a file to be cached. It may not be reasonable to
+cache only a few large files but to cache more smaller files instead.
+<p>
+You may use the size multipliers <i>b</i>, <i>k</i>, <i>M</i> and <i>G</i>
+<p>
+<br><i>Example:</i>
+
+<pre>
+cachemaxsize		15M
+</pre>
+<p>
+<br><i>Example:</i>
+
+The default value is <i>unlimited</i> you may also specify it explicitly:
+<pre>
+cachemaxsize		unlimited
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="cacheminsize">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>cacheminsize</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 0</td>
+</tr>
+</table>
+
+Specify the minimal size of a file to be cached. It may not be reasonable to
+cache files that are too small but to cache larger files instead.
+<p>
+You may use the size multipliers <i>b</i>, <i>k</i>, <i>M</i> and <i>G</i>
+<p>
+<br><i>Example:</i>
+
+<pre>
+cacheminsize		100k
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="cacheprefix">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>cacheprefix</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+This option sets the path for the cache, i.e. the path that is prepended
+before every cached object. The cache lies under
+<i>&lt;cacheprefix&gt;/user@host:port/</i>
+<p>
+<br><i>Example:</i>
+
+Set the FTP cache to /var/ftpcache/
+<pre>
+cacheprefix		/var/ftpcache
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="changeroot">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>changeroot</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+This option controls when jftpgw changes the root directory. Possible values
+are <i>start</i>, <i>startsetup</i>, <i>connect</i>, <i>connectsetup</i> and
+<i>never</i>.
+
+<ul>
+	<li><i>start</i>: Change the root directory right after the proxy is
+	launched. If you use this option, your logfiles and the pid file
+	have to be within the chroot-jail. Furthermore you cannot reread the
+	configuration file without stopping and restarting the proxy if it
+	is out of the chroot-jail.</li>
+	<li><i>startsetup</i>: Change it after doing some initial setup like
+	opening the log files and writing the pid file. If you use this
+	setting, the same limitations apply as for <i>start</i>.</li>
+	<li><i>connect</i>: Change the root directory as soon as a client
+	connects. That means that the main jftpgw process still runs out of
+	the chroot jail but every client runs within.</li>
+	<li><i>connectsetup</i>: See the analogy with <i>startsetup</i>.
+	With this option the root directory is changed after a client has
+	connected, an ftp process has forked off and has opened the
+	logfiles. So these can be outside of the chroot jail.
+	<li><i>never</i> means that the proxy never tries to do change
+	the root directory.</li>
+</ul>
+<p>
+Please keep in mind that you have to be root to change the root directory.
+So the proxy has to be launched by root and the <a
+href="config.html#dropprivileges">the dropprivileges option</a> which takes
+the same values must not be lower than the changeroot option.
+<p>
+Note as well, that after changing the root directory, you might encounter
+problems when trying to reload the configuration file or writing to log
+files. See the <a href="config.html#changerootdir">the changerootdir option</a> to see how jftpgw tries to open files within a chroot jail.<p>
+You also might not be able to resolve hostnames. This affects the way you
+have to write your configuration file (use IP numbers) instead of names.
+Furthermore a login like "USER anonymous@some.ftp.server.com" might not work
+anymore because jftpgw is unable to look up the host name. However you can
+copy some files to the chroot jail. On my system I had to copy
+<i>/etc/hosts</i> and <i>/etc/resolv.conf</i> to the chroot-jail in order to
+be able to do DNS lookups.
+<p>
+<br><i>Example:</i>
+
+Change the root directory as soon as a jftpgw process has forked off to
+handle a client connection
+<pre>
+changeroot		connect
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="changerootdir">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>changerootdir</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The changerootdir option causes jftpgw to change it root directory to
+the specified directory. The time of the change of the root directory
+depends on the setting of <a href="config.html#changeroot">the
+<i>changeroot</i> option</a>.<br>
+<p>
+Please note: When opening a file, jftpgw tries to strip off the
+<i>chrootdir</i> directory. That means that if you specify for example
+<pre>
+changerootdir		/var/chroots/ftp-proxy
+logfile			/var/chroots/ftp-proxy/logfile
+</pre>
+and jftpgw can't access <i>/var/chroots/ftp-proxy/logfile</i> it will try to
+open <i>/logfile</i>.
+<p>
+The same applies for the configuration file. If you want to be able to
+reload the configuration file later on and use a chroot jail at the same
+time, you can copy the configuration file to the jail and start the proxy
+with the -f option:
+<pre>
+jftpgw -f /var/chroots/ftp-proxy/etc/jftpgw.conf
+</pre>
+jftpgw will open <i>/var/chroots/ftp-proxy/etc/jftpgw.conf</i> the first
+time, do the chroot change and read <i>/etc/jftpgw.conf</i> later on because
+it strips off the name of the chroot directory from the name of the
+configuration file.
+<p>
+<br><i>Example:</i>
+
+<pre>
+changerootdir		/var/chroots/ftp-proxy
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="cmdlogfile">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>cmdlogfile</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The command logfiles log the commands the client sends to us. The format is
+<pre>
+	cmdlogfile			&lt;filename&gt;
+</pre>
+Use this setting
+<pre>
+	cmdlogfile-specs		&lt;CMD1&gt; &lt;CMD2&gt; &lt;CMD3&gt;
+</pre>
+to specify the commands that should be logged. It may be useless to log PORT
+commands or thus but USER RETR STOR and the like may be interesting If you
+want to log the PASS command, jftpgw will substitute the password with an
+asterisk (`*').
+
+<br><i></i>
+This example logs some common commands
+
+<br><i>Example:</i>
+
+<pre>
+cmdlogfile			/var/log/jftpgw.commandlog
+cmdlogfile-style		commonlog
+cmdlogfile-specs		USER RETR STOR CWD REST
+</pre>
+
+<br><i></i>
+This would log the complete FTP command set except for USER and PASS
+commands.
+
+<br><i>Example:</i>
+
+<pre>
+cmdlogfile			/var/log/jftpgw.commandlog
+cmdlogfile-specs		* -USER -PASS
+cmdlogfile-style		commonlog
+</pre>
+
+<br><i></i>
+Whereas this one logs only the commands that initiate up- and downloads
+and writes it to a logfile in the so-called "xferlog" format like other
+famous FTP daemons. xferlog only makes sense with "RETR" and "STOR" in the
+specs-line.
+
+<br><i>Example:</i>
+
+<pre>
+cmdlogfile			/var/log/jftpgw.xferlog
+cmdlogfile-style		xferlog
+cmdlogfile-specs		RETR STOR
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="cmdlogfile-style">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>cmdlogfile-style</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+
+The option controls how a log message from the client should be written
+to the logfile
+<pre>
+	cmdlogfile-style			&lt;log format&gt;
+</pre>
+
+&lt;log format&gt; could be one of:
+<pre>
+cmdlogfile-style			xferlog
+cmdlogfile-style			commonlog
+cmdlogfile-style			&lt;format string&gt;
+</pre>
+<br>
+
+&lt;log string&gt; is a %-escaped format string resembling to printf(3).
+The recognized format characters are:
+<pre>
+'c'  complete (prints 'c' or 'i' for complete/incomplete)
+'D'  common log date/time format: "[18/Feb/2001:11:42:46 +0100]"
+'t'  date/time like in "Wed Feb 14 01:41:28 2001"
+'T'  Time taken to transmit/receive file, in seconds
+'b'  Bytes sent for request
+'R'  throughput rate in kbyte/s
+'f'  Filename stored or retrieved, absolute path
+'F'  Filename stored or retrieved, as the client sees
+'m'  Command (method) name received from client, e.g., RETR
+'r'  Command with parameters, e.g. "RETR /misc/editors/vim/README"
+'P'  pid of the jftpgw process that handles this connection
+'s'  Numeric FTP response code (status)
+'y'  tYpe (ASCII or binary)
+'w'  direction (incoming or outgoing)
+'o'  anonymous? ("a" for anonymous logins, "r" for user logins)
+'e'  sErvice (always "ftp" for now)
+'n'  aNon-user (e-Mail address when logged in as anonymous user,
+     "UNKNOWN" otherwise)
+'H'  Server host name
+'A'  Server host IP
+'d'  Server host name as specified in the login
+'h'  Client host name
+'a'  Client host IP
+'I'  Server interface address
+'i'  Client interface address
+'l'  Server user name (login)
+'L'  Effective server user name
+'C'  Forwarded server user name
+'u'  unix time in seconds since the epoch
+'U'  unix time in seconds since the epoch with milliseconds appended after a dot
+'%'  percent sign itself
+</pre>
+
+<br><i></i>
+This is how <tt>xferlog</tt> style logging is realized:
+
+<br><i>Example:</i>
+
+<pre>
+cmdlogfile-style	"%d %h %T %f %y %w _ %n %l %s 0 * %c"
+</pre>
+
+<br><i></i>
+<tt>xferlog</tt> generates this type of output:
+<pre>
+Dow Mon DD hh:mm:ss YYYY %d %h %T %f %y %w _ %n %l %s 0 * %c
+</pre>
+
+<br><i>Example:</i>
+
+(this is actually one line)
+<pre>
+Sat Oct 12 11:53:26 2002 ftp.uni-stuttgart.de localhost 0 \
+welcome.msg b o _ xxxcccc anonymous 226 0 * i
+</pre>
+
+<br><i></i>
+<tt>commonlog</tt> generates this type of output:
+<pre>
+	REMOTE AUTH USER [DATE] "CMD" RCODE SIZE
+</pre>
+<p>
+In fact it is just a short notation for %A %n %l %D "%M" %s %b as style argument.
+</p>
+
+<p>
+<br><i>Example:</i>
+
+(lines wrapped around)
+</p>
+<pre>
+130.133.1.100 jwieland@bigfoot.de anonymous \\
+ -> [12/Feb/2003:13:34:47 +0100] "LIST" 226 1749
+130.133.1.100 jwieland@bigfoot.de anonymous \\
+ -> [12/Feb/2003:13:34:49 +0100] "PORT 134,130,181,112,138,150" 200 0
+130.133.1.100 jwieland@bigfoot.de anonymous \\
+ -> [12/Feb/2003:13:34:49 +0100] "TYPE I" 0 0
+130.133.1.100 jwieland@bigfoot.de anonymous \\
+ -> [12/Feb/2003:13:34:50 +0100] "RETR /editors/vim/README" 226 9158
+</pre>
+
+
+<br><i></i>
+<tt>squid style logging</tt> could be done by this:
+
+
+<br><i>Example:</i>
+
+<pre>
+cmdlogfile-style	%U %b %a %w/%s %T %m ftp://%d/%f %l %e/%A %y
+</pre>
+
+
+<table width="100%" cellspacing=0 border=0>
+<a name="commandtimeout">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>commandtimeout</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 300</td>
+</tr>
+</table>
+
+This specifies the timeout value in seconds before a connection is closed.
+The <i>commandtimeout</i> applies to the timeout of the control connection
+(where the commands from the clients are read). You may probably want to set
+this to a higher value than the timeout for the <i>transfertimeout</i> since
+it is more likely that a user is just idle sending commands than it is
+likely that a transfer takes such a long time to be continued.
+<p>
+<br><i>Example:</i>
+
+Set the timeout to 600 seconds (i.e. 10 minutes)
+<pre>
+transfertimeout		600
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="connectionlogdir">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>connectionlogdir</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The connection log dir creates a logfile for each connection and writes the
+commands the client sends to us in that file.
+You must also specify a prefix and a suffix for the filenames
+
+The rest of the filename consists of date, time and the pid of the process
+that handled the connection.
+
+<br><i>Syntax:</i>
+
+<pre>
+connectionlogdir			&lt;directory&gt;
+connectionlogdir-fileprefix		&lt;fileprefix&gt;
+connectionlogdir-filesuffix		&lt;filesuffix&gt;
+connectionlogdir-specs			&lt;CMD1&gt; &lt;CMD2&gt; &lt;CMD3&gt;
+connectionlogdir-syle			&lt;style&gt;
+</pre>
+
+
+<br><i></i>
+This example logs the most common commands in a directory where each ftp
+session is covered in one file called (in this example)
+
+/var/log/jftpgw-connect-2000-03-23--18:24:05-891.log
+
+Between the prefix and the suffix of the filename, jftpgw inserts the
+date, the time and the pid (of the jftpgw process that handles the
+connection).
+
+<br><i>Example:</i>
+
+<pre>
+connectionlogdir		/var/log/jftpgw
+connectionlogdir-fileprefix	jftpgw-connect-
+connectionlogdir-filesuffix	.log
+connectionlogdir-specs		USER PASS RETR STOR
+connectionlogdir-syle		commonlog
+</pre>
+
+
+<table width="100%" cellspacing=0 border=0>
+<a name="controlserveraddress">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>controlserveraddress</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Set the source IP to use for the control connection to the FTP server. You
+may need this if you set dataserveraddress since some FTP servers decline
+PORT commands if the IP doesn't match the source IP of the control
+connection.
+<p>
+See also <a href="config.html#dataserveraddress">the dataserveraddress option</a>
+<p>
+<br><i>Example:</i>
+
+<pre>
+controlserveraddress	212.39.39.39
+</pre>
+<br>
+You may also specify devices like in the following example:
+<pre>
+controlserveraddress ppp0
+</pre>
+<br>
+However this works only if you see "can get IPs from interfaces" in the
+output of <i>jftpgw -v</i>.
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="dataclientaddress">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>dataclientaddress</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Set the IP to send to the client for PORT/PASV responses. This may be useful
+for you if you have several interfaces that have all working routes to the
+client and if one of them is faster than the default interface. Furthermore,
+if you have a tight firewall setup and you don't want to allow the proxy to
+send ICMP or UDP packets to your internal network (see also <a href="config.html#getinternalip">the getinternalip option</a>)
+
+<p>
+See also <a href="config.html#dataserveraddress">the dataserveraddress option</a>
+<p>
+<br><i>Example:</i>
+
+<pre>
+dataclientaddress	212.39.39.39
+</pre>
+
+You may also specify devices like in the following example:
+<pre>
+&lt;dataclientaddress ppp0&gt;
+	[...]
+&lt;/dataclientaddress&gt;
+</pre>
+However this works only if you see "can get IPs from interfaces" in the
+output of <i>jftpgw -v</i>.
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="dataport">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>dataport</b></td>
+	<td align="right"><b>Sections:</b>  none</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The dataport option is outdated and has been replaced by the more powerful
+portrange settings. See the <a href="config.html#activeportrangeclient">
+activeportrangeclient</a> and the <a
+href="config.html#passiveportrangeserver">passiveportrangeserver</a>
+options.
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="dataserveraddress">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>dataserveraddress</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Set the IP to send to the server for PORT/PASV responses. This may be useful
+for you if you have several interfaces that have all working routes to the
+server and if one of them is faster than the default interface.
+<p>
+See also <a href="config.html#dataclientaddress">the dataclientaddress option</a>
+<p>
+<br><i>Example:</i>
+
+<pre>
+dataserveraddress	212.39.39.39
+</pre>
+<br>
+You may also specify devices like in the following example:
+<pre>
+dataserveraddress ppp0
+</pre>
+<br>
+However this works only if you see "can get IPs from interfaces" in the
+output of <i>jftpgw -v</i>.
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="debuglevel">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>debuglevel</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 7</td>
+</tr>
+</table>
+
+The debug level:
+
+<table>
+	<tr>
+	    <td>0</td><td>quiet</td>
+	</tr><tr></td>
+	    <td>1</td><td>fatal errors</td>
+	</tr><tr></td>
+	    <td>2</td><td>critical errors</td>
+	</tr><tr></td>
+	    <td>3</td><td>errors</td>
+	</tr><tr></td>
+	    <td>4</td><td>important warnings</td>
+	</tr><tr></td>
+	    <td>5</td><td>warnings</td>
+	</tr><tr></td>
+	    <td>6</td><td>important information</td>
+	</tr><tr></td>
+	    <td>7</td><td>information</td>
+	</tr><tr></td>
+	    <td>8</td><td>program flow</td>
+	</tr><tr></td>
+	    <td>9</td><td>unimportant</td>
+	</tr>
+</table>
+
+I recommend to set it to 5 or 6. Do NOT set it below 4 unless you know
+what you are doing.
+
+<br><i>Example:</i>
+
+<pre>
+debuglevel 5
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="defaultforward">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>defaultforward</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+This option has been removed in version jftpgw-0.13.beta.i<p>
+You can do the same with the forward option.
+
+<table width="100%" cellspacing=0 border=0>
+<a name="defaultmode">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>defaultmode</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> asclient</td>
+</tr>
+</table>
+
+Specify the default mode (active or passive ftp) between the proxy and the
+real server. This is useful if either the client or the server does not
+support the desired mode
+
+`asclient' uses the mode the client suggests on the other side to the
+real server as well
+
+Valid options are `active', `passive', or `asclient'
+
+<br><i>Example:</i>
+
+<pre>
+	defaultmode		active
+	defaultmode		passive
+	defaultmode		asclient
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="dnslookups">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>dnslookups</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> yes</td>
+</tr>
+</table>
+
+This option enables you to switch on or off DNS lookups. If you don't want
+to resolve names to IPs and vice versa, you might want to turn this off.
+To control forward and reverse lookups seperately, see <a
+href="config.html#forwardlookups">the <i>forwardlookups</i> option</a> and
+the <a href="config.html#reverselookups">the <i>reverselookups</i>
+option</a>).<p>
+
+<br><i>Example:</i>
+
+<pre>
+dnslookups		off
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="dropprivileges">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>dropprivileges</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> start</td>
+</tr>
+</table>
+
+This option controls when jftpgw tries to drop its privileges. Possible values
+are <i>start</i>, <i>startsetup</i>, <i>connect</i>, <i>connectsetup</i> and
+<i>never</i> (yes, these are the same values as the <a
+href="config.html#changeroot">the changeroot option</a>)
+
+<ul>
+	<li><i>start</i>: Drop privileges right after the proxy is
+	launched. If you use this option, your logfiles and the pid file are
+	created with the user and group id you specified in the <a
+href="config.html#runasuser">the runasuser option</a> and the <a
+href="config.html#runasgroup">the runasgroup option</a>.
+	</li>
+	<li><i>startsetup</i>: Change the identity after doing some initial
+	setup like opening the log files and creating the pid file.</li>
+	<li><i>connect</i>: Change the identity as soon as a client
+	connects. That means that the main jftpgw process still runs with
+	superuser identity (so it will change its effective user id as often
+	as possible).</li>
+	<li><i>connectsetup</i>: See the analogy with <i>startsetup</i>.
+	With this option the identity is changed after a client has
+	connected, an ftp process has forked off and has opened
+	per-client logfiles. So these are created with the identity of the
+	superuser. You also need to set this if your operating system needs
+	root privileges to get the real destination of the client when using
+	the transparent proxy feature. (Linux doesn't need this,
+	though)</li>
+	<li><i>never</i> means that the proxy never tries to do drop the
+	privileges completely but still tries to change its effective user
+	id.</li>
+</ul>
+<p>
+If you want to change the root directory, please see <a
+href="config.html#changeroot">the changeroot option</a>, too.
+<p>
+Please note the implications of changing the identity. If you
+drop the privileges later than at stage <i>start</i> for example, you won't
+be able to re-open the logfile without shutting down and restarting jftpgw
+completely. It would open the logfile as user root, then change to the
+unprivileged user and as soon as the logfile is closed, jftpgw loses access
+to it because it has no longer the privileges to open it again. This may not
+be bad, maybe it is intended, but you just should know about these things.
+<p>
+In the very rare situations where you need to bind to a privileged port
+(port numbers below 1024) you will have to specify <i>never</i> but make
+sure there is really no other way to go.
+<p>
+<br><i>Example:</i>
+
+Drop privileges after the main logfile and the pid file have been created
+<pre>
+dropprivileges		startsetup
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="forward">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>forward</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Specify user forwards here. There are several examples below how jftpgw
+rewrites a login (user/password combination) to the proxy into another
+login to the target FTP server.
+
+<br><i>Syntax:</i>
+
+<pre>
+forward  &lt;newlogin&gt;  &lt;jftpgw pass&gt;   &lt;destination pass&gt;
+</pre>
+
+<hr>
+
+<br><i></i>
+Forward user <i>eddie</i> who logs in from <i>212.39.39.39</i> to
+<i>eddie@ftp.micky.com</i> and pass the password along.
+
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;from 212.39.39.39&gt;
+	&lt;user eddie&gt;
+		forward ftp.micky.com
+	&lt;/user&gt;
+&lt;/from&gt;
+</pre>
+
+<hr>
+<br><i></i>
+Forward user <i>eddie</i> to <i>eddie@ftp.micky.com</i>, allow any password but
+send <i>mickeymouse</i> to the server <i>ftp.micky.com</i>.
+
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;from 212.39.39.39&gt;
+	&lt;user eddie&gt;
+		forward ftp.micky.com	*	mickeymouse
+	&lt;/user&gt;
+&lt;/from&gt;
+</pre>
+
+<hr>
+<br><i></i>
+Forward user <i>eddie</i> to <i>eddie@ftp.micky.com</i>, allow only password
+<i>goofy</i>, but send the password <i>mickymouse</i> to the destination
+machine. (<i>goofy</i> may be here in a crypted version like
+<i>yp8T9bQvnPoFs</i> if you have crypt support (check with <i>jftpgw
+-v</i>). Use <i>jftpgw -e</i> to create crypted passwords)
+
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;from 212.39.39.39&gt;
+	&lt;user eddie&gt;
+		forward ftp.micky.com	goofy	mickeymouse
+	&lt;/user&gt;
+&lt;/from&gt;
+</pre>
+or
+<pre>
+&lt;from 212.39.39.39&gt;
+	&lt;user eddie&gt;
+		forward ftp.micky.com    yp8T9bQvnPoFs    mickeymouse
+	&lt;/user&gt;
+&lt;/from&gt;
+</pre>
+
+<hr>
+<br><i></i>
+Forward every user to <i>anonymous@ftp.kernel.org</i>
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;user *&gt;
+	forward    anonymous@ftp.kernel.org
+&lt;/user&gt;
+</pre>
+
+<hr>
+<br><i></i>
+Forward every user except for <i>goofy</i> to
+<i>anonymous@ftp.kernel.org</i>, allow any password but send
+<i>mickeymouse</i> as the new password to <i>ftp.kernel.org</i>.
+
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;user * exclude goofy&gt;
+	forward     anonymous@ftp.kernel.org    *    mickeymouse
+&lt;/user&gt;
+</pre>
+
+<hr>
+<br><i></i>
+Forward the user who logged in with <i>anonymous@ftp.kernel.org</i> to a
+secret FTP server of the real Mickeymouse where there is proof that
+Mickeymouse really lives! Of course, this FTP server does not run on port
+21... Futhermore we have to use active FTP since the Mickeymouse has a
+NAT-ted FTP server and is too lame to configure it properly.
+
+<p>
+<br><i>Example:</i>
+
+<pre>
+&lt;user anonymous&gt;
+	&lt;to ftp.kernel.org&gt;
+		# Note that this would log on as user anonymous,
+		# since I didn't specify a new user name.
+		forward		mickeylives.micky.com:2121,a
+	&lt;/to&gt;
+&lt;/user&gt;
+</pre>
+
+<hr>
+If you want to run a proxy that passes _all_ the authorisation data to
+another proxy/server, see the following example. If you log on to jftpgw
+with say user@site@site:port exactly this is passed to the server you
+specify here.
+
+
+<br><i></i>
+Pass the complete authorization to otherproxy and use port 3942 there
+
+<br><i>Example:</i>
+
+<pre>
+forward		*@otherproxy:3942
+
+forward		*@fileserv
+</pre>
+
+<hr>
+If you want to set a destination for people who log in just with <i>user</i>
+and not <i>user@remotehost</i> you can use the defaultforward setting to
+specify a destination host that should be used if none is given and none can
+be obtained by the transparent proxy framework. The setting is ignored if a
+destination is given with the login (user@destination) or when jftpgw is
+used as a transparent proxy and can get a destination that way.
+
+
+<br><i></i>
+Forward users to ftp.company.com, if they log in just with their user names.
+
+<br><i>Example:</i>
+
+<pre>
+forward		%@ftp.company.com
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="forwardlookups">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>forwardlookups</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> yes</td>
+</tr>
+</table>
+
+This option enables you to switch on or off DNS forward lookups. If you don't
+want to resolve names to IPs, you might want to turn this off.<p>
+See also the <a href="config.html#dnslookups">the <i>dnslookups</i>
+option</a> and the <a href="config.html#reverselookups">the
+<i>reverselookups</i> option</a>).<p>
+
+<br><i>Example:</i>
+
+<pre>
+forwardlookups		off
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="getinternalip">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>getinternalip</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> udp</td>
+</tr>
+</table>
+
+If you have jftpgw running as a transparent proxy, the proxy has a problem:
+It needs to know the IP of the interface that is connected to the client in
+order to send it correct PASV/PORT answers. Normally, this IP is obtained by
+a system call. However, if the proxy works as a transparent proxy, this
+system call does return the target the client program wanted to connect to,
+not the local IP jftpgw is interested in.
+<p>
+So jftpgw has to find another way to obtain this IP. There are two
+possibilities:
+	<ul>
+		<li>Either to send an ICMP packet (echo request) and read
+		the answer (echo reply) in order to see to which IP it was
+		sent back (<i>icmp</i>)
+		<li>or to send a UDP packet to the client and see how the
+		kernel routes the packet (<i>udp</i>).
+		<li>If the proxy should not try to get the address by
+		itself, say <i>configuration</i> here and specify the
+		address in the configuration file. See option <a
+		href="config.html#dataclientaddress">dataclientaddress</a>
+	</ul>
+
+If you set <i>udp</i> you may also want to set the port the packets go to.
+(see <a href="config.html#udpport">the udpport option</a>)
+<p>
+You have to be root to send ICMP packets. The
+<a href="config.html#dropprivileges">the dropprivileges option</a> must not
+be set below <i>connectsetup</i>.
+<p>
+If you say <i>udp</i> or <i>icmp</i> here, make sure the <a
+href="config.html#dataclientaddress">dataclientaddress</a> option is NOT
+set, since it will override your setting.
+<p>
+<br><i>Example:</i>
+
+Get the IP by sending an ICMP packet
+<pre>
+getinternalip		icmp
+</pre>
+<br><i>Example:</i>
+
+Get the IP by sending a UDP packet
+<pre>
+getinternalip		udp
+</pre>
+<br><i>Example:</i>
+
+Specify it manually
+<pre>
+getinternalip		configuration
+dataclientaddress	192.168.10.20
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="hostcachetimeout">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>hostcachetimeout</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 28800</td>
+</tr>
+</table>
+
+Since jftpgw does quite a lot of DNS lookups normally (see
+<a href="config.html#dnslookups">the <i>dnslookups</i> option</a>), it uses
+a built-in cache for every record it has looked up. The value you can
+specify here controls the time in seconds an item from this cache is valid
+before it is removed from the cache. The default value is 8 hours, that are
+28800 seconds.
+
+<br><i>Example:</i>
+
+<pre>
+hostcachetimeout	10800
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="initialsyst">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>initialsyst</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> yes</td>
+</tr>
+</table>
+
+As many other clients jftpgw sends a SYST command to the FTP server right
+after the connection succeeded. This is just a check if there is really an
+FTP server there and if it answers properly.
+<p>
+This shouldn't be a problem normally. However, people told me about firewalls
+that drop the connection if this command is sent at the very beginning. If
+you set this to "off", jftpgw won't send an initial SYST command anymore.
+<p>
+<br><i>Example:</i>
+
+<pre>
+initialsyst		off
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="limit">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>limit</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Limit the number of simultaneous logins to the jftpgw proxy server. The
+option has no effect if you run jftpgw from inetd.
+
+<br><i>Syntax:</i>
+
+<pre>
+limit    &lt;maximal # of connections&gt;
+</pre>
+
+<br><i>Example:</i>
+
+<pre>
+&lt;from 192.168.0.0/16&gt;
+	limit			4
+&lt;/from&gt;
+
+&lt;from 0/0 exclude 192.168.0.0/16&gt;
+	limit			20
+&lt;/from&gt;
+</pre>
+
+<p>
+Please note that this option is not reliable if you use it within the
+<i>&lt;time&gt;</i>-tag. Consider the following example:
+<p>
+<pre>
+&lt;time Mon 18:00 - 19:00&gt;
+	limit		10
+&lt;/time&gt;
+
+&lt;time Mon 19:01 - 20:00&gt;
+	limit		5
+&lt;/time&gt;
+</pre>
+
+If there are 10 clients connected at 19:00, there can connect additional 5
+clients a minute later. So you might have 15 clients connected though your
+limit is only 5 ! This limitation only applies to the <i>&lt;time&gt;</i>-tag.
+<p>
+Hint: If you want to use jftpgw with (x)inetd, the limit-Option does not work
+because there is no controlling process that could count its children. In
+this case you can use the <i>per_source = x</i> xinetd option.
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="listen">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>listen</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 0.0.0.0:2370</td>
+</tr>
+</table>
+
+Bind to the address(es) specified below You may either specify an IP
+or a hostname of your local machine<p>
+
+With this option you can specfify on which IP address jftpgw should
+listen. Imagine you have two ethernet devices, one for the internal
+network and one for the external. If you specify only the internal
+one here jftpgw is only accessible from the internal network. On the
+IP of your other ethernet device that is connected to the outside
+you could run a real FTP server for outside users for example... So
+both services would run on the same machine and may have the same
+port numbers assigned but they do not interfere since they listen to
+different devices, to different IPs. 0.0.0.0 makes jftpgw to listen
+on all available devices.<p>
+
+<br><i>Example:</i>
+
+This would listen on all interfaces on port 2370
+and on the IP associated with localhost (usually 127.0.0.1)
+additionally on port 2380<pre>
+listen			0.0.0.0:2370            localhost:2380
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="logfile">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>logfile</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> /var/log/jftpgw.log</td>
+</tr>
+</table>
+
+Which is the logfile jftpgw should write its log messages to?
+
+<br><i>Example:</i>
+
+<pre>
+logfile /var/log/jftpgw.log
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="loginstyle">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>loginstyle</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 1</td>
+</tr>
+</table>
+
+Unfortunately there is no real standard for FTP proxy access out there and
+thus several methods have evolved over the time. jftpgw supports most of
+them, below is the complete list with a description for each login style. If
+you use transparent proxy support, you should not have to care for this
+option. You only need this to connect to jftpgw with a special client. See
+the documentation for the client which methods it supports and then set the
+proper value here.
+<ul>
+<li>
+	type 0: <pre>Do NOT use a firewall</pre>
+</li><li>
+	type 1: <pre>Connect to firewall host, but send
+		"USER user@real.host.name"
+	USER with no login (user@host port)
+	USER with no login (user@host:port)</pre>
+</li><li>
+	type 2: <pre>Connect to firewall, login with "USER fwuser"
+		 and "PASS fwpassword", and then "USER user@real.host"
+		 and thereafter "PASS password"
+	USER with login (user@host port)
+	USER with login (user@host:port)</pre>
+</li><li>
+	type 3: <pre>Connect to and login to firewall, and then use
+		 "SITE real.host.name", followed by the regular
+		 USER and PASS.
+	SITE with login (user@host port)
+	SITE with login (user@host:port)</pre>
+</li><li>
+	type 4: <pre>Connect to firewall, and then use (without login)
+		 "SITE real.host.name", followed by the regular
+		 USER and PASS.
+	SITE without login</pre>
+</li><li>
+	type 5: <pre>Connect to and login to firewall, and then use
+		 "OPEN real.host.name", followed by the regular
+		 USER and PASS.</pre>
+</li><li>
+	type 6: <pre>Connect to firewall, and then use (without login)
+		 "OPEN real.host.name", followed by the regular
+		 USER and PASS.</pre>
+</li><li>
+	type 7: <pre>Connect to firewall host, but send
+		  "USER user@fwuser@real.host.name" and
+		  "PASS pass@fwpass" to login.
+	CheckPoint Firewall 1</pre>
+</li><li>
+	type 8: <pre>Connect to firewall host, but send
+		  "USER fwuser@real.host.name" and
+		  "PASS fwpass" followed by a regular
+		  "USER user" and
+		  "PASS pass" to complete the login.</pre>
+</li><li>
+	type 9: <pre>Connect to firewall host, but send
+		  "USER user@real.host.name fwuser" and
+		  "PASS pass" followed by
+		  "ACCT fwpass" to complete the login.
+	User@host FireID</pre>
+</li>
+</ul>
+<p>
+If there are accounts involved ("SITE/OPEN with login" for example) see <a
+href="config.html#account">the account option</a>) for information on how to
+create one.
+<p>
+<br><i>Example:</i>
+
+The client uses the SITE command without login.
+<pre>
+loginstyle		4
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="logintime">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>logintime</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> user</td>
+</tr>
+</table>
+
+This option controls when jftpgw connects to the FTP server. Possible values
+are <i>connect</i>, <i>user</i> and <i>pass</i>.
+<ul>
+	<li>
+		<i>connect</i> only works with transparent proxy support or
+		with a forward setting like "forward *@123.123.123.123"
+		(how else should the proxy determine the destination?)
+	</li>
+	<li>
+		<i>user</i> connects after a "USER user@otherhost.com" and
+	</li>
+	<li>
+		<i>pass</i> reads the whole login and then logs in to the FTP server.
+	</li>
+</ul>
+It should be okay for all cases to use <i>user</i>. Do not use
+<i>connect</i> if you have forwards configured (see <a href="config.html#forward">the forward option</a>)
+<p>
+If you have set this option to either <i>user</i> or <i>pass</i> you may
+configure the 220 welcome line with <a href="config.html#welcomeline">the welcomeline option</a>.
+<p>
+<br><i>Example:</i>
+
+Read all the login information and then connect to the server
+<pre>
+logintime			pass
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="logstyle">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>logstyle</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> files</td>
+</tr>
+</table>
+
+Here you can specify if you would like to create extra files for jftpgw
+log messages or if you just want to use the usual Unix logging style via a
+daemon (syslogd) that catches all logging messages and writes them to a
+file.
+
+<br><i>Syntax:</i>
+
+<pre>
+logstyle (files|syslog)
+</pre>
+
+The default value is "files".
+
+<br><i>Example:</i>
+
+<pre>
+logstyle		syslog
+</pre>
+
+<br><i>Example:</i>
+
+<pre>
+logstyle		files
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="passallauth">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>passallauth</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+This option has been removed in version 0.13.beta.i<p>
+Please have a look at the <a href="config.html#forward">the <i>forward</i>
+option</a>, you can do the same with this option now.
+
+<table width="100%" cellspacing=0 border=0>
+<a name="passiveportrange">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>passiveportrange</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The portrange to use for passive transfers. See <a href="config.html#activeportrange">the <i>activeportrange</i> option</a>.
+
+<p>
+&nbsp;
+</p>
+<table width="100%" cellspacing=0 border=0>
+<a name="passiveportrangeclient">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>passiveportrangeclient</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The portrange to use for passive transfers. This is the portrange that is
+issued to the client with the "<i>227 Entering Passive Mode
+(127,0,0,1,4,13).</i>" message. The proxy listens on a port in the portrange
+and waits for the client to connect.<p>
+The <i>passiveportrangeclient</i> setting overrules the
+<i>passiveportrange</i> option.<p>
+See <a href="config.html#activeportrange">the <i>activeportrange</i>
+option</a> for examples on portrange specification.
+
+<p>
+&nbsp;
+</p>
+<table width="100%" cellspacing=0 border=0>
+<a name="passiveportrangeserver">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>passiveportrangeserver</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The portrange to use for passive transfers. This is the portrange that is
+used to choose the source port for the proxy if it connects to the port the
+server told the proxy with the "<i>227 Entering Passive Mode
+(127,0,0,1,4,13).</i>" message.<p>
+The <i>passiveportrangeserver</i> setting overrules the
+<i>passiveportrange</i> option.<p>
+See <a href="config.html#activeportrange">the <i>activeportrange</i>
+option</a> for examples on portrange specification.
+
+<p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="pidfile">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>pidfile</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> /var/run/jftpgw.pid</td>
+</tr>
+</table>
+
+If jftpgw should create a pidfile you can specify the location here
+Keep in mind that on a typical Unix-System not all the users have write
+access to /var/run so you might want to change the path.
+<p>
+
+<br><i>Example:</i>
+
+<pre>
+pidfile			/var/run/jftpgw.pid
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="reverselookups">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>reverselookups</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> yes</td>
+</tr>
+</table>
+
+This option enables you to switch on or off DNS reverse lookups. If you only
+use IPs in your configuration file and thus you don't need to resolve IPs
+you might want to turn this off.<p>
+See also the <a href="config.html#dnslookups">the <i>dnslookups</i>
+option</a> and the <a href="config.html#forwardlookups">the
+<i>forwardlookups</i> option</a>).<p>
+
+<br><i>Example:</i>
+
+<pre>
+reverselookups		off
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="runasgroup">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>runasgroup</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The following option is the name of the group jftpgw should change to when
+dropping privileges (see <a
+href="config.html#dropprivileges">the dropprivileges option</a>). More
+important however is the setting of <a
+href="config.html#runasuser">the runasuser option</a>.
+
+<br><i>Example:</i>
+
+<pre>
+runasgroup		proxy
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="runasuser">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>runasuser</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+The following option is the name of the user jftpgw should run with.
+This option is only effective if jftpgw is run as root (decide on your own
+if you take this risk to run jftpgw as root at all - if so, try to drop
+privileges as soon as possible - see <a
+href="config.html#dropprivileges">the dropprivileges option</a>).<p>
+It might be a good idea to create an own user and a own group for jftpgw.<p>
+Take a look on the <a href="config.html#runasgroup">the runasgroup option</a>.
+
+<br><i>Example:</i>
+
+<pre>
+runasuser		ftp-proxy
+</pre>
+
+
+<table width="100%" cellspacing=0 border=0>
+<a name="serverport">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>serverport</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 21</td>
+</tr>
+</table>
+
+The default server port (usually Port 21 for FTP)
+
+<br><i>Example:</i>
+
+<pre>
+serverport		21
+</pre>
+
+
+<table width="100%" cellspacing=0 border=0>
+<a name="strictasciiconversion">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>strictasciiconversion</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> on</td>
+</tr>
+</table>
+
+When converting binary to ASCII, there is no rule how to convert a \r\n. If
+you do have set <i>strictasciiconversion</i>, you replace every \n by an
+\r\n, which results in an \r\r\n. If you don't, the conversion will leave
+this situation untouched, since it already is a proper ASCII line break.
+<p>
+<br><i>Example:</i>
+
+<pre>
+	strictasciiconversion		on
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+<table width="100%" cellspacing=0 border=0>
+<a name="syslogfacility">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>syslogfacility</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> daemon</td>
+</tr>
+</table>
+
+Specify the facility for the syslog logging here.
+
+<br><i>Example:</i>
+
+<pre>
+syslogfacility		ftp
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="throughput">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>throughput</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Limit the throughput of an ftp connection. The unit of rate is kbyte per
+second.
+
+<br><i>Syntax:</i>
+
+<pre>
+througput  &lt;rate&gt;
+</pre>
+
+<br><i>Example:</i>
+
+<pre>
+&lt;user anonymous&gt;
+	throughput       7.5
+&lt;/user&gt;
+</pre>
+
+<br><i></i>
+This setting limits every client to 10.00 kBytes/second. It does <b>not</b>
+mean that all hosts from this network share 10.00 kBytes/second.
+
+<br><i>Example:</i>
+
+<pre>
+&lt;from 123.123.0.0/16&gt;
+	throughput       10.00
+&lt;/from&gt;
+</pre>
+
+
+<table width="100%" cellspacing=0 border=0>
+<a name="transfertimeout">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>transfertimeout</b></td>
+	<td align="right"><b>Sections:</b>  ALL</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 300</td>
+</tr>
+</table>
+
+This specifies the timeout value in seconds before a connection is closed.
+The <i>transfertimeout</i> applies to all data transfers.
+<p>
+<br><i>Example:</i>
+
+Set the timeout to 180 seconds (i.e. 3 minutes)
+<pre>
+transfertimeout		180
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="transparent-forward">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>transparent-forward</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> <font size="-1">no default value</font></td>
+</tr>
+</table>
+
+Another forwarding option is the transparent-forward option. This is for
+people that depend on another FTP proxy but would like to use jftpgws
+capabilities of a transparent proxy or of access/throughput restrictions.
+
+You have to enable <a href="config.html#transparent-proxy">the <i>transparent-proxy</i> option</a> in order to use transparent-forward.
+
+<br><i></i>
+Say, you define the transparent-forward host "some.host.com:2839", jftpgw
+would gather a connection through its transparent proxy capabilities and
+log in to "some.host.com" on port 2839 with a login of "user@realtarget"
+
+<br><i>Example:</i>
+
+<pre>
+transparent-forward	some.host.com:2839
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="transparent-forward-include-port">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>transparent-forward-include-port</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> on</td>
+</tr>
+</table>
+
+This option controls how jftpgw logs in to the FTP server you forward your
+sessions to. If you have set it to <i>on</i> it is:
+
+<pre>
+USER remoteuser@remotehost:remoteport
+</pre>
+
+and if it is off, it looks like
+
+<pre>
+USER remoteuser@remotehost
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="transparent-proxy">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>transparent-proxy</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> off</td>
+</tr>
+</table>
+
+This option decides whether or not the transparent proxy support should be
+used. For a full description on the transparent proxy support, see
+<a href="howtouse-tp.html">Transparent proxy support</a>
+<p>
+<br><i>Example:</i>
+
+<pre>
+transparent-proxy		on
+</pre>
+
+Instead of "on" you may also say "yes", "true" or just "1". As you may already have guessed, the opposite is "off", "no", "false" and "0". Other values are not allowed.
+
+<p>
+&nbsp;
+</p>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="udpport">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>udpport</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> 2370</td>
+</tr>
+</table>
+
+See <a href="config.html#getinternalip">the getinternalip option</a> to
+learn what this option is for.
+<p>
+The UDP packets should go to a port where no client of your internal network
+listens to. No reaction of the clients that receive this packet is required.
+As soon as it is sent out, jftpgw knows what it was looking for. Please make
+sure that the packet can leave the local machine, i.e. no firewall stops it
+from leaving. If it is out, you may intercept it.
+<p>
+<br><i>Example:</i>
+
+Send UDP packets to port 49499
+<pre>
+udpport			49499
+</pre>
+
+<table width="100%" cellspacing=0 border=0>
+<a name="welcomeline">&nbsp;</a>
+<tr bgcolor="#91c9f0">
+	<td align="left"><b>welcomeline</b></td>
+	<td align="right"><b>Sections:</b> GLOBAL, SERVERTYPE, FROM, PROXYIP, PROXYPORT, TIME</td>
+</tr>
+<tr bgcolor="#91c9f0">
+	<td>&nbsp;</td>	<td align="right"><b>Default:</b> FTP proxy (v<<versionnumber>>) ready</td>
+</tr>
+</table>
+
+If jftpgw should display a custom welcome line (the first line that is
+sent to the client upon connect), specify it here.
+<p>
+If you're forwarding all your connections to a single FTP server or if
+you're doing transparent proxying you might be interested in setting <a
+href="config.html#logintime">the logintime option</a> to the value
+<i>connect</i>. With that setting, jftpgw logs in to the FTP server right
+after you have connected to the proxy and it doesn't display its own welcome
+message but the real welcome message of the server.
+<p>
+<br><i>Example:</i>
+
+<pre>
+welcomeline 		This is an unknown FTP server
+</pre>
+<p>
+<br><i>Example:</i>
+
+You may also use multiple lines:
+<pre>
+welcomeline		Hello\r\nHere are three\r\nlines.
+</pre>
+
+
+    </td></tr>
+
+
+   </table></td></tr>
+<!-- end of text -->
+
+    <tr><td><table width="100%" cellspacing=0
+    cellpadding=2 border=0> <tr bgcolor="#91c9f7">
+     <td width="50%"><font size="-1">&lt;&lt; Previous:
+       <a href="howtouse-tp.html">How to use the transparent proxy support</a>
+     </font></td> <td width="50%"
+     align=right><font size="-1">Next:
+       <a href="portability.html">Portability</a>
+      &gt;&gt;</font></td>
+    </tr>
+   </table></table>
+  </td>
+ </tr>
+</table> <!-- The copyright notice at the bottom--> <p align=right><font
+size="-1">Webpages created by
+ <a href="mailto:joe@mcknight.de">Joachim Wieland</a> &copy;
+ 2000, 2001, 2002, 2003<br></font><font size="-2">
+ Layout by Thomas Schultz &copy; 2000</font></p>
+</body> </html>

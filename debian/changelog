@@ -1,0 +1,85 @@
+jftpgw (0.13.5-1) unstable; urgency=low
+
+  * New upstream version.
+  * Added comments to jftpgw.conf
+
+ -- Michael Meskes <meskes@debian.org>  Fri Jun  4 10:39:24 CEST 2004
+ 
+jftpgw (0.13.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Michael Meskes <meskes@debian.org>  Tue,  1 Apr 2003 13:44:16 +0200
+ 
+jftpgw (0.13.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Made jftpgw.conf mode 600 in case there is a password stored there.
+    (closes: #176757)
+  * Made /var/run/jftpgw owned by root. The pidfile is written before jftpgw
+    drops its privileges anyway. (closes: #178461)
+
+ -- Michael Meskes <meskes@debian.org>  Thu, 20 Mar 2003 09:14:23 +0100
+ 
+jftpgw (0.13.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Add jftpgw.conf to debian dir to make sure the debian default is
+    installed.
+
+ -- Michael Meskes <meskes@debian.org>  Fri, 20 Dec 2002 11:47:25 +0100
+ 
+jftpgw (0.13.1-2) unstable; urgency=low
+
+  * Added info about kernel version to docs
+  * Fixed config file so it lists pidfile location correctly for both modes.
+  * Moved pid file to directory owned by nobody to stop that annoying error
+    message that jftpgw cannot remove it.
+
+ -- Michael Meskes <meskes@debian.org>  Wed, 21 Aug 2002 15:23:33 +0200
+ 
+jftpgw (0.13.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Michael Meskes <meskes@debian.org>  Sun, 14 Apr 2002 14:23:04 +0200
+ 
+jftpgw (0.13.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Michael Meskes <meskes@debian.org>  Thu, 28 Feb 2002 14:33:11 +0100
+
+jftpgw (0.12.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * Use latest config.sub and config.guess.
+
+ -- Michael Meskes <meskes@debian.org>  Tue, 21 Aug 2001 17:30:02 +0200
+
+jftpgw (0.0.11f-3) unstable; urgency=low
+
+  * Updated config.guess and config.sub (closes: #103384).
+
+ -- Michael Meskes <meskes@debian.org>  Sun,  8 Jul 2001 13:15:35 +0200
+
+jftpgw (0.0.11f-2) unstable; urgency=low
+
+  * Added the missings conffiles file (closes: #94335).
+  * Added prerm/postinst/init.d files.
+
+ -- Michael Meskes <meskes@debian.org>  Tue,  1 May 2001 20:23:52 +0200
+
+jftpgw (0.0.11f-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Michael Meskes <meskes@debian.org>  Thu, 29 Mar 2001 12:06:17 +0200
+
+jftpgw (0.0.11-1) unstable; urgency=low
+
+  * Initial Release.
+  * Added patch for syslog support.
+
+ -- Michael Meskes <meskes@debian.org>  Sun, 29 Oct 2000 13:55:29 +0100
+

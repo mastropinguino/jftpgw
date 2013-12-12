@@ -1,0 +1,52 @@
+#!/bin/sh
+#/etc/init.d/jftpgw: start jftpgw daemon.
+
+case "$1" in
+  start)
+        echo -n "Starting ftp proxy: "
+        if start-stop-daemon --start --quiet \
+            --exec /usr/sbin/jftpgw 
+        then
+            echo jftpgw.
+        else
+            echo
+        fi
+    ;;
+ 
+  stop)
+        echo -n "Stopping ftp proxy: "
+        if start-stop-daemon --stop --quiet \
+            --pidfile /var/run/jftpgw/jftpgw.pid
+        then
+            echo jftpgw.
+        else
+            echo
+        fi
+    ;;
+ 
+  restart)
+    $0 force-reload
+    ;;
+ 
+  force-reload)
+    echo -n "Restarting ftp proxy."
+    /etc/init.d/jftpgw stop > /dev/null 2>&1
+    echo -n "."
+    sleep 3
+    echo -n "."
+    if start-stop-daemon --start --quiet --pidfile /var/run/jftpgw/jftpgw.pid \
+        --exec /usr/sbin/jftpgw
+    then
+        echo "done."
+    else
+        echo
+    fi
+    ;;
+ 
+  *)
+    echo "Usage: /etc/init.d/jftpgw {start|stop}"
+    exit 1
+ 
+esac
+
+exit 0

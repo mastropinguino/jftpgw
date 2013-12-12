@@ -1,0 +1,13 @@
+jftpgw for Debian
+----------------------
+
+My company (credativ GmbH) sponsored the addition of syslog functionality to
+jftpgw by the usptream author. While this patch has not been officially
+released yet, I still include it, since it enhaces functionality and runs
+absolutely stable.
+
+ -- Michael Meskes <meskes@debian.org>, Sun, 29 Oct 2000 13:55:29 +0100
+
+It is not possible to compile jftpgw so it transparent mode works on kernel 2.2 as well as on 2.4. This binary is compiled to work with kernel 2.4. If you need a 2.2 version please get the sources on compile on a 2.2 system.
+
+ -- Michael Meskes <meskes@debian.org>, Wed Aug 21 15:28:55 CEST 2002

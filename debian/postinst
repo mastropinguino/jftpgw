@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+case "$1" in
+        configure)
+		test -f /var/run/jftpgw.pid && \
+		mv /var/run/jftpgw.pid /var/run/jftpgw && \
+		chown nobody.nogroup /var/run/jftpgw/jftpgw.pid 
+
+		#DEBHELPER#
+        ;;
+ 
+        abort-upgrade|abort-remove|abort-deconfigure)
+                exit 0
+        ;;
+ 
+        *)
+                echo "postinst called with unknown argument \$1'" >&2
+                exit 0
+        ;;
+esac
+ 
+exit 0

@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+
+exit 0 if ($ARGV[0] ne 'upgrade');
+
+$server=0;
+$pidfile_found=0;
+
+open (CONFIN, "/etc/jftpgw.conf");
+open (CONFOUT, "> /etc/jftpgw.conf.new");
+while (<CONFIN>)
+{
+	$server=1		if (/<servertype /);
+	
+	if ((/pidfile/) && ($server==1))
+	{
+		$pidfile_found=1;
+		$_ =~ s/\/var\/run\/jftpgw.pid/\/var\/run\/jftpgw\/jftpgw.pid/;
+	}
+	if ((/<.servertype>/) && ($pidfile_found==0) && ($server==1))
+	{
+		print CONFOUT "	pidfile			/var/run/jftpgw/jftpgw.pid\n";
+		$server=0;
+	}
+	
+	print CONFOUT $_;
+}
+close CONFIN;
+close CONFOUT;
+
+system ("mv /etc/jftpgw.conf.new /etc/jftpgw.conf");
+

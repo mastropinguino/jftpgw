@@ -1,0 +1,22 @@
+Source: jftpgw
+Section: net
+Priority: optional
+Maintainer: Michael Meskes <meskes@debian.org>
+Build-Depends: debhelper (>> 3.0.0), autotools-dev
+Standards-Version: 3.5.2
+
+Package: jftpgw
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Joe's FTP Proxy/Gateway
+ FTP proxy program with the following features:
+  * Active as well as passive FTP transfers
+  * Logging of connection attempts
+  * Access control features
+  * If run as root, it drops the privileges as often as possible
+  * You can pretend to run a real ftp server
+  * User specific forward features
+  * Specify how many users are allowed to log in from which IP ranges
+  * The throughput rate can be throttled
+  * Various login strings are possible
+  * Regular users can run the proxy server on unprivileged ports as well
