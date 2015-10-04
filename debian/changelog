@@ -1,3 +1,8 @@
+jftpgw (0.13.5-2) unstable; urgency=low
+  * Add support for MLSD command
+
+ -- Vincenzo Farruggia <mastropinguino@networky.net>  Sun, 01 Oct 2015 19:04:12 +0200
+
 jftpgw (0.13.5-1) unstable; urgency=low
 
   * New upstream version.
