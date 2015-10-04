@@ -42,6 +42,7 @@ struct cmdhandlerstruct std_cmdhandler[] = {
 	{ "QUIT", std_quit },
 	{ "LIST", std_list },
 	{ "NLST", std_list },
+  { "MLSD", std_list },
 	{ 0, 0 }
 };
 
